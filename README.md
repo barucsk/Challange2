@@ -1,15 +1,17 @@
-Ok we create 2 files. The first demo.java you can check the source code on src/
-1.Compile the file:
-	javac -cp lib/CLIPSJNI.jar src/demo.java -d classes/
-2.Execute the file:
-	java -cp lib/CLIPSJNI.jar;classes examples.clips.demo
+Ok. Here now we are mixed clips inside an jade agent
+First we are do a agent test call ClipsAgent.java
+And later do a diferents agent MarketAgent, PersonsAgent, ProdcustAgent to run the challange1 over
+agents. And finally AllInOneAgent that run that three in one.
 
-Now lets compile another file, but in this case we are going to call
-clips throuth a file
-1.Compile the file:
-	javac -cp lib/CLIPSJNI.jar src/persons.java -d classes/
-2.Executethe file:
-	java -cp lib/CLIPSJNI.jar;classes examples.clips.persons
+To compile the files we use this command structure
+	javac -cp lib/*  src/ClipsAgent.java  -d classes/
+	javac -cp lib/*  src/PersonsAgent.java  -d classes/
+
+To execute the agents use this command
+	java -cp lib\*;classes jade.Boot -gui -agents clipsAgent:examples.clips.agents.ClipsAgent
+	java -cp lib\*;classes jade.Boot -gui -agents PersonsAgent:examples.clips.agents.PersonsAgent
+	
+And do it the same with the other files
 
 ****************************************************************************************
 		https://youtu.be/dlM0BXMEoh4
